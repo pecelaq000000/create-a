@@ -1,0 +1,68 @@
+==== Connector Mixin Patch Audit Summary ====
+Successful: 10
+Partial: 0
+Failed: 0
+Success rate: 100.00%        Accuracy: 100.00%
+=============================================
+
+Mixin method org/betterx/wover/potions/mixin/PotionBrewingMixin wover_bootstrapPotions(Lnet/minecraft/world/item/alchemy/PotionBrewing$Builder;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Lnet/minecraft/world/item/alchemy/PotionBrewing;
+  >> Using org.sinytra.adapter.patch.resolver.target.SplitTargetMethodSubResolver
+     - Adjusting split method target to bootstrap(Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/alchemy/PotionBrewing;
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=null, name=bootstrap, desc=(Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/alchemy/PotionBrewing;]
+     - Set property 'at' to: AtData{value=INVOKE, target=Lnet/minecraft/world/item/alchemy/PotionBrewing$Builder;build()Lnet/minecraft/world/item/alchemy/PotionBrewing;}
+
+Mixin method org/betterx/bclib/mixin/common/AnvilMenuMixin bcl_onDamageAnvil(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=null, name=lambda$onTake$2, desc=(Lnet/minecraft/world/entity/player/Player;FLnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V]
+     - Set property 'at' to: AtData{value=HEAD}
+  >> Using org.sinytra.adapter.patch.processor.ParametersProcessor
+     - Change descriptor to (Lnet/minecraft/world/entity/player/Player;FLnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+
+Mixin method org/betterx/bclib/mixin/common/shears/MushroomCowMixin bclib_isShears(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.DisableMixinProcessor
+     - Remove mixin method
+
+Mixin method org/betterx/bclib/mixin/common/shears/SheepMixin bclib_isShears(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.DisableMixinProcessor
+     - Remove mixin method
+
+Mixin method org/betterx/bclib/mixin/common/shears/PumpkinBlockMixin bclib_isShears(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=Lnet/minecraft/world/level/block/PumpkinBlock;, name=useItemOn, desc=(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/ItemInteractionResult;]
+     - Set property 'at' to: AtData{value=INVOKE, target=Lnet/minecraft/world/item/ItemStack;canPerformAction(Lnet/neoforged/neoforge/common/ItemAbility;)Z}
+  >> Using org.sinytra.adapter.patch.processor.ParametersProcessor
+     - Change descriptor to (Lnet/minecraft/world/item/ItemStack;Lnet/neoforged/neoforge/common/ItemAbility;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+
+Mixin method org/betterx/bclib/mixin/common/shears/TripWireBlockMixin bclib_isShears(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=Lnet/minecraft/world/level/block/TripWireBlock;, name=playerWillDestroy, desc=(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/level/block/state/BlockState;]
+     - Set property 'at' to: AtData{value=INVOKE, target=Lnet/minecraft/world/item/ItemStack;canPerformAction(Lnet/neoforged/neoforge/common/ItemAbility;)Z}
+  >> Using org.sinytra.adapter.patch.processor.ParametersProcessor
+     - Change descriptor to (Lnet/minecraft/world/item/ItemStack;Lnet/neoforged/neoforge/common/ItemAbility;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+
+Mixin method org/betterx/bclib/mixin/common/shears/SnowGolemMixin bclib_isShears(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.DisableMixinProcessor
+     - Remove mixin method
+
+Mixin method org/betterx/betternether/mixin/common/MushroomMixin canStay(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+  >> Using org.sinytra.adapter.patch.resolver.special.InjectorOrdinalResolver
+     - Update injection point ordinal from Context[target=null, ordinal=1] to 0
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=Lnet/minecraft/world/level/block/MushroomBlock;, name=canSurvive, desc=(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z]
+     - Set property 'at' to: AtData{ordinal=0, value=RETURN}
+
+Mixin method org/betterx/betternether/mixin/common/piglin/PiglinAiMixin bn_isWearingGold(Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=Lnet/minecraft/world/entity/monster/piglin/PiglinAi;, name=isWearingGold, desc=(Lnet/minecraft/world/entity/LivingEntity;)Z]
+     - Set property 'at' to: AtData{value=INVOKE, target=Lnet/minecraft/world/item/ItemStack;makesPiglinsNeutral(Lnet/minecraft/world/entity/LivingEntity;)Z}
+  >> Using org.sinytra.adapter.patch.processor.ParametersProcessor
+     - Change descriptor to (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z
+
+Mixin method org/betterx/betternether/mixin/common/obsidian_breaker/PlayerMixin wover_test_getDestroySpeed(Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/level/block/state/BlockState;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)F
+  >> Using org.sinytra.adapter.patch.resolver.target.SplitTargetMethodSubResolver
+     - Adjusting split method target to getDigSpeed(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)F
+  >> Using org.sinytra.adapter.patch.processor.PropertyProcessor
+     - Set property 'method' to: MethodQualifier[owner=null, name=getDigSpeed, desc=(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)F]
+     - Set property 'at' to: AtData{value=INVOKE, target=Lnet/minecraft/world/entity/player/Inventory;getDestroySpeed(Lnet/minecraft/world/level/block/state/BlockState;)F}
+
